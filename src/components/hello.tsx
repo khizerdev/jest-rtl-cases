@@ -1,7 +1,11 @@
 import React from "react";
 
-const Hello = () => {
-  return <div>Hello</div>;
+interface HelloProps {
+  name?: String;
+}
+
+const Hello: React.FC<HelloProps> = ({ name }) => {
+  return <div>Hello {name}</div>;
 };
 
 export default Hello;
