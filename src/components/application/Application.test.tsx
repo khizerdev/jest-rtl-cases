@@ -56,5 +56,20 @@ describe('Render correctly', () => {
 
     const nameElement4 = screen.getByDisplayValue('Syed');
     expect(nameElement4).toBeInTheDocument();
+
+    /** getByAltText */
+
+    const imageElement = screen.getByAltText('a person with a laptop');
+    expect(imageElement).toBeInTheDocument();
+
+    /** getByTitle */
+
+    const closeElement = screen.getByTitle('close');
+    expect(closeElement).toBeInTheDocument();
+
+    /** getByTestId */
+
+    const customElement = screen.getByTestId('custom-element');
+    expect(customElement).toBeInTheDocument();
   });
 });
